@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/layout.css">
+
+    {% if page.css %}
+    <link rel="stylesheet" href="/static/css/{{ page['css'] }}">
+    {% endif %}
+
+    {% if page.title == '' %}
+    <title>{{ page.site.name }}</title>
+    {% else %}
+    <title>{{ page.site.name }} - {{ page.title }}</title>
+    {% endif %}
+
+
+</head>
+
+<body id="wrap">
+    <header>
+        <div>
+
+            <a href=""><img src="{{ page.site.logo }}" alt="Logo de {{ page.site.name }}"></a>
+            <h1>{{ page.site.name }}</h1>
+
+        </div>
+
+        <form action="/search" method="get">
+            <input type="search" name="q" placeholder="Procurar..." value="">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </header>
+
+    <nav>
+        <a href="/">
+            <span>Inicio</span>
+        </a>
+        <a href="/contacts">
+            <span>Contatos</span>
+        </a>
+        <a href="/about">
+            <span>Sobre</span>
+        </a>
+    </nav>
+
+
+    <main>
+
+        <article>
+            {% block article %}{% endblock %}
+        </article>
+
+        <aside>
+            {% block aside %}{% endblock %}
+        </aside>
+    </main>
+
+    <footer>
+        <footer>
+            <a href="/"><i class="fa-solid fa-house fa-fw"></i></a>
+            <div>
+                © 2024 {{ page.site.owner }}
+                <small>
+                    <a href="/contacts">Faça contato</a>&nbsp;|&nbsp;<a href="/policies">Políticas de Privacidade</a>
+                </small>
+            </div>
+            <a href="#wrap"><i class="fa-solid fa-circle-up fa-fw"></i></a>
+        </footer>
+    </footer>
+</body>
+
+</html>

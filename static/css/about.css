@@ -1,0 +1,50 @@
+article {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+}
+
+article h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+article p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Media Queries para responsividade */
+@media (min-width: 600px) {
+    article {
+        padding: 30px;
+    }
+
+    article h1 {
+        font-size: 2.5rem;
+    }
+
+    article p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    article {
+        padding: 40px;
+    }
+
+    article h1 {
+        font-size: 3rem;
+    }
+
+    article p {
+        font-size: 1.4rem;
+    }
+}
