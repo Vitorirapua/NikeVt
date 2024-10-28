@@ -29,7 +29,7 @@ article p {
     justify-content: center;
 }
 
-.product {
+.item {
     background: #fff;
     margin: 20px;
     padding: 20px;
@@ -40,16 +40,16 @@ article p {
     box-sizing: border-box;
 }
 
-.product img {
+.item img {
     max-width: 100%;
     height: auto;
 }
 
-.product h2 {
+.item h2 {
     color: #333;
 }
 
-.product p {
+.item p {
     color: #666;
 }
 

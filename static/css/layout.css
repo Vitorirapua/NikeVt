@@ -19,6 +19,10 @@ header {
     justify-content: space-between; /* Adicionado para espaçar os itens */
 }
 
+header h1{
+    color: white;
+}
+
 header > div {
     display: flex;
     align-items: center;
@@ -26,9 +30,6 @@ header > div {
     background-color: rgb(53, 53, 53);
 }
 
-header img {
-    width: 4rem;
-}
 
 header form {
     background-color: rgb(53, 53, 53);

@@ -1,37 +1,20 @@
 {% extends 'layout.html' %}
 
 {% block article %}
-<article>
-    <h1>Bem-vindo à Nossa Loja Nike</h1>
-    <p>Explore nossa coleção exclusiva de produtos Nike. Desde tênis de alta performance até roupas confortáveis e estilosas, temos tudo o que você precisa para se destacar. Aproveite nossas ofertas especiais e faça suas compras com facilidade.</p>
-</article>
+<h1>
+    Bem vindo
+</h1>
 {% endblock %}
 
 {% block aside %}
 <div class="container">
-    <div class="product">
-        <img src="/static/img/prd1.png" alt="Produto Nike">
-        <h2>Tênis Nike Air Max</h2>
-        <p>R$ 499,99</p>
-        <button>Comprar</button>
+    {% for thing in page.things %}
+    <div class="item">
+        <img src="{{ thing.t_photo }}" alt="{{ thing.t_name }}">  <!-- Exibe a foto do item -->
+        <h2>{{ thing.t_name }}</h2>  <!-- Exibe o nome do item -->
+        <p>{{ thing.t_description }}</p>  <!-- Exibe a descrição do item -->
     </div>
-    <div class="product">
-        <img src="/static/img/prd2.png" alt="Produto Nike">
-        <h2>Camiseta Nike Dri-FIT</h2>
-        <p>R$ 149,99</p>
-        <button>Comprar</button>
-    </div>
-    <div class="product">
-        <img src="/static/img/prd3.png" alt="Produto Nike">
-        <h2>Calça Nike Sportswear</h2>
-        <p>R$ 299,99</p>
-        <button>Comprar</button>
-    </div>
-    <div class="product">
-        <img src="/static/img/prd4.png" alt="Produto Nike">
-        <h2>Jaqueta Nike Windrunner</h2>
-        <p>R$ 399,99</p>
-        <button>Comprar</button>
-    </div>
+    {% endfor %}
+
 </div>
 {% endblock %}
