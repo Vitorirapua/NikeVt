@@ -1,5 +1,72 @@
-aside form, aside h2, aside p{
-    text-align: center;
+main aside{
     background-color: white;
 }
 
+aside form, aside h2, aside p{
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+article h2, article p { 
+    font-size: 1.25rem;
+}
+
+#login {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+    margin: auto;
+    max-width: 300px;
+}
+
+#login label {
+    display: block;
+    padding: 0 0 .25rem .5rem;
+}
+
+#login input {
+    border: 1px solid red;
+    padding: .25rem .5rem;
+    width: 100%;
+} 
+
+#login button {
+    background-color: grey;
+    color: white    ;
+    padding: .25rem .5rem;
+    border: none;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+#login input:valid {
+    border: 1px solid green;
+}
+
+#login:valid button {
+    background-color: steelblue;
+    pointer-events: all;
+}
+
+
+#myDialog {
+    position: absolute;
+    border: none;
+    border-radius: .3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    width: 90%;
+    max-width: 300px;
+    margin: auto;
+    background-color: #ddd;
+    font-size: 90%;
+}
+
+#myDialog h4 {
+    margin-top: 0;
+}
+
+#myDialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
