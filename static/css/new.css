@@ -1,0 +1,43 @@
+
+aside{
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+}
+
+aside h1{
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+aside p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+form {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+    margin: auto;
+    max-width: 300px;
+}
+
+form label {
+    display: block;
+    padding: 0 0 .25rem .5rem;
+}
+
+form input , textarea{
+    padding: .25rem .5rem;
+    width: 100%;
+} 
+
+aside button{
+    margin-top: 1rem;
+}

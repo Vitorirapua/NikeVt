@@ -71,7 +71,30 @@ nav a:hover {
     background-color: black;
 }
 
+article {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+}
+
+
+article h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+article p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
 footer {
+    margin-top: 1rem;
     background-color: rgb(53, 53, 53);
     padding: 20px 0;
     border-top: 1px solid #ddd;
@@ -103,6 +126,10 @@ footer small {
     display: block;
     margin-top: 10px;
     color: #999;
+}
+
+.container{
+    border: solid 1px white;
 }
 
 /* Media Queries para responsividade */
@@ -209,4 +236,25 @@ footer small {
     footer a {
         margin: 0 25px;
     }
+}
+
+
+#myDialog {
+    border: none;
+    border-radius: .3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    width: 90%;
+    max-width: 300px;
+    margin: auto;
+    background-color: rgb(126, 126, 126);
+    font-size: 90%;
+}
+
+#myDialog h4 {
+    margin-top: 0;
+}
+
+#myDialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
 }

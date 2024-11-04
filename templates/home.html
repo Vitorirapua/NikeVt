@@ -2,8 +2,35 @@
 
 {% block article %}
 <h1>
-    Bem vindo
+    Bem vindo  {{ page.user.fname }}!
 </h1>
+
+{% if page.edit %}
+
+<dialog  id="myDialog">
+    <h4>Legal!</h4>
+    <p>Seu treco foi editado!</p>
+    <form method="dialog">
+        <button>OK</button>
+    </form>
+</dialog>
+<script>myDialog.showModal()</script>
+
+{% endif %}
+
+{% if page.delete %}
+
+<dialog  id="myDialog">
+    <h4>Legal!</h4>
+    <p>Seu treco foi apagado!</p>
+    <form method="dialog">
+        <button>OK</button>
+    </form>
+</dialog>
+<script>myDialog.showModal()</script>
+
+{% endif %}
+
 {% endblock %}
 
 {% block aside %}
@@ -13,6 +40,9 @@
         <img src="{{ thing.t_photo }}" alt="{{ thing.t_name }}">  <!-- Exibe a foto do item -->
         <h2>{{ thing.t_name }}</h2>  <!-- Exibe o nome do item -->
         <p>{{ thing.t_description }}</p>  <!-- Exibe a descrição do item -->
+        <button onclick="location.href='/view/{{ thing.t_id }}'">Ver</button>
+        <button onclick="location.href='/edit/{{ thing.t_id }}'">Editar</button>
+        <button onclick="if(confirm('Tem certeza?')) location.href='/delete/{{ thing.t_id }}'; return false">Apagar</button>
     </div>
     {% endfor %}
 

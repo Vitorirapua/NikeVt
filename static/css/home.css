@@ -1,25 +1,4 @@
 
-article {
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 5px;
-    margin: 20px auto;
-    text-align: center;
-    width: 80%;
-}
-
-article h1 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-article p {
-    color: #666;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
 .container {
     width: 80%;
     margin: auto;
@@ -53,4 +32,16 @@ article p {
     color: #666;
 }
 
+main button {
+    color: white;
+    background-color: black;
+    border-radius: 30%;
+    padding: .5rem;
+    transition: .3s;
+}
 
+main button:hover{
+    background-color: rgb(61, 61, 61);
+    cursor: pointer;
+    padding: .6rem;
+}

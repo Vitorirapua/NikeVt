@@ -35,22 +35,13 @@ INSERT INTO owner (
     o_email,
     o_pass
 ) VALUES (
-    '2000-10-28',
-    'Joca da Silva',
-    'jocasilva@email.com',
-    SHA1('Senha123')
-);
-
-INSERT INTO thing (
-    t_owner,
-    t_photo,
-    t_name,
-    t_description,
-    t_location
-) VALUES (
-    '1',
-    'https://picsum.photos/200',
-    'peteca',
-    'Cheia de penas velhas',
-    'Caixa de sapato sob a cama'
+    '2007-06-25',
+    'Vitor irapuã',
+    'vitor@gmail',
+    SHA1('123456')
+),(
+    '2008-09-09',
+    'Maria Eduarda',
+    'duda@gmail',
+    SHA1('123456')
 );

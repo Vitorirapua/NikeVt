@@ -1,11 +1,29 @@
 {% extends 'layout.html' %}
 
-{% block aside %}
+{% block article %}
 
 <h2>Logue-se</h2>
 <p>você precisa se logar para operar sua coleção.</p>
 
-<form action="/login" method="post">
+{% if error %}
+
+<dialog id="myDialog">
+    <h4>Oooops!</h4>
+    <p>Usuário e/ou senha inválido.</p>
+    <form method="dialog">
+        <button>OK</button>
+    </form>
+</dialog>
+<script>myDialog.showModal()</script>
+
+{% endif %}
+
+{% endblock %}
+
+{% block aside %}
+
+
+<form action="/login" method="post" id="login">
 
     <p>
         <label for="email">E-mail:</label>
@@ -19,6 +37,20 @@
         <button type="submit">Entrar</button>
     </p>
 
+    <p>
+        <span>Você ainda não se cadastrou? <a href="/newuser">Clique aqui para cadastrar</a></span>
+    </p>
+
+    <p>
+        <span>
+            <a href="/sendpass">Esqueceu a senha?</a>
+        </span>
+    </p>
+
 </form>
+{% if error %}
+
+
+{% endif %}
 
 {% endblock %}

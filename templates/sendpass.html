@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block article %}
+
+<h2>Esqueceu a senha?</h2>
+
+<p>Preencha seu e-mail no campo abaixo. Caso ele exista no aplicativo, lhe enviaremos uma senha nova.</p>
+
+<form class="center" method="post" action="/sendpass" id="sendpass"> 
+    <input type="email" name="email" id="email" required>
+    <button type="submit">Enviar</button>
+</form>
+
+<p class="center"><a href="/login">Fazer login</a></p>
+<p class="center"><a href="/newuser">Cadastre-se</a></p>
+
+{% if feedback == 'error' %}
+
+<dialog id="myDialog">
+    <h4>Oooops!</h4>
+    <p>Este e-mail não existe! Tente outro e-mail ou cadastre-se.</p>
+    <form method="dialog">
+        <button>OK</button>
+    </form>
+</dialog>
+<script>myDialog.showModal()</script>
+
+{% endif %}
+
+{% if feedback == 'success' %}
+
+<dialog id="myDialog">
+    <h4>Oba!</h4>
+    <p>Uma senha temporária foi enviada para seu e-mail.</p>
+    <form method="dialog">
+        <button type="button" onclick="location.href='/login'">OK</button>
+    </form>
+</dialog>
+<script>myDialog.showModal()</script>
+
+{% endif %}
+
+
+{% endblock %}

@@ -41,7 +41,10 @@
         <a href="/">
             <span>Inicio</span>
         </a>
-      
+        <a href="/new">
+            <span>Adicionar</span>
+        </a>
+        <a href="/profile">Perfil</a>
     </nav>
 
 
@@ -65,6 +68,10 @@
             <a href="#wrap"><i class="fa-solid fa-circle-up fa-fw"></i></a>
         </footer>
     </footer>
+    <script>
+        // Evita o reenvio dos formulários ao atualizar a página
+        if (window.history.replaceState) window.history.replaceState(null, null, window.location.href);
+    </script>
 </body>
 
 </html>

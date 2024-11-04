@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block article %}
+
+
+<h2>Perfil de {{ user.fname }}</h2>
+
+<p>{{ userdata.o_name }}</p>
+<p>{{ userdata.o_email }}</p>
+
+
+<p class="center">
+    <button onclick="location.href='/logout'">Logout / Sair</button>
+</p>
+
+
+
+{%  endblock %}
